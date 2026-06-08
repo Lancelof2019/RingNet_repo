@@ -223,7 +223,7 @@ If you find our work useful, please consider citing it:
 @article{Zhang_RingNet_2026,
   title={RingNet: an interactive platform for multi-modal data visualization in networks},
   author={Liang Zhang, Xin Lai},
-  journal={Preprint},
+  journal={bioRxiv},
   doi={10.64898/2026.01.20.700593},
   year={2026}}
 ```
