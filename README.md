@@ -110,13 +110,13 @@ Build per-community node/edge maps from an interaction network and multi-omics m
 ringnet(graph_edges,
         graph_nodes,
         node_group,
-        Data1  = NULL,
-        Data2  = NULL,
-        Data3  = NULL,
-        Data4  = NULL,
-        sample_group:  = NULL,
+        Data1 = NULL,
+        Data2 = NULL,
+        Data3 = NULL,
+        Data4 = NULL,
+        sample_group: = NULL,
         out_json,
-        TOP_N  = 100,
+        TOP_N = 100,
         KEEP_DIRECTED = TRUE,
         n_cores = max(1L, parallel::detectCores() - 1L))
 ```
@@ -164,29 +164,29 @@ out_json   <- file.path(cwd, "data", "ringnet_community.json")
 ```
 `Example:` Basic run (expression only)
 ```
-ringnet(graph_edges   = edges_path,
-        graph_nodes   = nodes_path,
+ringnet(graph_edges = edges_path,
+        graph_nodes = nodes_path,
         node_group = nodegroup_path,
-        Data1  = expression,
+        Data1 = expression,
         out_json = out_json,
-        TOP_N  = 200,
+        TOP_N = 200,
         KEEP_DIRECTED = TRUE)
 ```
 
 `Example:` Multi-omics run (expression + methylation + SNV + CNV + stage)
 ```
-ringnet( `graph_edges`       = "data/edges.csv",
-        `graph_nodes`       = "data/nodes.csv",
-        `node_group`     = "data/membership.csv",
-        `Data1`  = "data/expression.csv",
+ringnet( `graph_edges` = "data/edges.csv",
+        `graph_nodes` = "data/nodes.csv",
+        `node_group` = "data/membership.csv",
+        `Data1` = "data/expression.csv",
         `Data2` = "data/methylation.csv",
-        `Data3`        = "data/cnv.csv",
-        `Data4`         = "data/snv.csv",
-        `sample_group`       = "data/stage.csv",
-        `out_json`    = "output/ringnet_community.json",
-        `TOP_N`       = 150,
+        `Data3` = "data/cnv.csv",
+        `Data4` = "data/snv.csv",
+        `sample_group` = "data/stage.csv",
+        `out_json` = "output/ringnet_community.json",
+        `TOP_N` = 150,
         `KEEP_DIRECTED` = FALSE,
-        `n_cores`     = 8)
+        `n_cores` = 8)
 ```
 ### Notes on Behavior and Common Pitfalls ####
 
@@ -219,10 +219,6 @@ The output JSON is a list of communities, each containing:
 
 ## Usage & Citation 
 If you find our work useful, please consider citing it:
-
-Liang Zhang, Xin Lai. RingNet: an interactive platform for multi-modal data visualization in networks. 
-Submitted (2026).
-
 ```bash
 @article{Zhang_RingNet_2026,
   title={RingNet: an interactive platform for multi-modal data visualization in networks},
