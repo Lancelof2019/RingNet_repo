@@ -117,7 +117,7 @@ This module selects representative samples based on multi-omics deviation. It su
 - **Samples per Group:** Controls the number of selected samples (Default: `8`).
 
 
-## 5.Group and Edge Visualization Controls
+## 5. Group and Edge Visualization Controls
 
 <img width="904" height="92" alt="image" src="https://github.com/user-attachments/assets/9a3969a1-44b6-4c2b-a2b2-705c1fbd1fed" />
 
@@ -130,7 +130,7 @@ Fine-tune the connections between nodes:
 - **Color by `interact_id`:** Color edges by interaction type instead of weight.
 
 
-## 6.Viewer Types
+## 6. Viewer Types
 
 | Directed Viewer | Undirected Viewer |
 | :--- | :--- |
