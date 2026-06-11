@@ -94,6 +94,8 @@ Pattern Discovery typically compares **Data1** and **Data2** using Z-score thres
 
 ### Analysis Modes (Group-aware vs. Group-free)
 
+<img width="904" height="45" alt="image" src="https://github.com/user-attachments/assets/2fb002b4-a4db-43b2-b91d-e5a83cb87642" />
+
 Depending on whether you have stage or group information, the viewer adjusts its metrics:
 
 ### **Group-aware Mode** (With Stage Data)
@@ -108,7 +110,7 @@ Depending on whether you have stage or group information, the viewer adjusts its
 
 ## 4. Difference and Similarity Displaying Module
 
-<img width="904" height="45" alt="image" src="https://github.com/user-attachments/assets/2fb002b4-a4db-43b2-b91d-e5a83cb87642" />
+<img width="441" height="60" alt="image" src="https://github.com/user-attachments/assets/2e9508b4-3550-46e9-9c3c-9d68bf42dc5d" />
 
 This module selects representative samples based on multi-omics deviation. It supports stage aware sampling and robust node filtering using Data1 and Data2 thresholds.
 
@@ -127,7 +129,7 @@ Fine-tune the connections between nodes:
 - **Edge Colors:** Map weights to a color gradient (Negative/Neutral/Positive).
 - **Show Weights:** Toggle numeric labels on edges.
 - **Edge Data Norm:** Choose between `Raw`, `Min-Max`, or `Z-score`.
-- **Color by `interact_id`:** Color edges by interaction type instead of weight.
+- **Color by `interact_id`:** Color edges by interaction type.
 
 
 ## 6. Viewer Types
