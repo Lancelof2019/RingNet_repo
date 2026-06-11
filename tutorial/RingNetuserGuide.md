@@ -1,5 +1,7 @@
-# RingNet Network Viewer Tutorial
+# RingNet Frontend User Guide
+
 ## Quick Overview
+
 <p align="justify">RingNet is an interactive network visualization platform for multi modal biological data. Each node can display up to five aligned data layers. The frontend loads JSON network objects and provides filtering, exploration, pattern discovery, and export functions.
 <p>
 
