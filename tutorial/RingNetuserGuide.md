@@ -1,20 +1,10 @@
 # RingNet Network Viewer Tutorial
-
-Welcome to the **RingNet Network Viewer**! This guide provides a comprehensive overview of the interface controls and recommended workflows for visualizing complex multi-omics networks.
-
----
-
 ## Quick Overview
-The RingNet interface is designed for high-dimensional biological data visualization, supporting:
+<p align="justify">RingNet is an interactive network visualization platform for multi modal biological data. Each node can display up to five aligned data layers. The frontend loads JSON network objects and provides filtering, exploration, pattern discovery, and export functions.
+<p>
 
-- **Network Analysis:** Selection, layout adjustment, and node search.
-- **Multi-omics Integration:** Color control for multiple data layers (Data1-Data4).
-- **Discovery Tools:** Pattern Discovery, Similarity/Difference displaying.
-- **Data Export:** Snapshot saving and high-quality image export (PNG/SVG).
-
----
-
-## 1. Network & Layout Controls
+## 1. Network control panel
+<img width="904" height="68" alt="image" src="https://github.com/user-attachments/assets/4dc45df5-5691-410a-872a-f776ef70187f" />
 
 ### Network Selection
 Select the specific network or community you wish to explore. Note that **only one network** is displayed at a time to maintain clarity.
@@ -34,9 +24,7 @@ Arrange nodes on the canvas using various algorithms. Changing the layout **only
 Filter nodes based on their connectivity.
 > **Example:** Setting `Degree Range: 0 – 500` will only show nodes whose visible degree falls within this specific range.
 
----
-
-## 2. Export & Snapshot Management
+### Export & Snapshot Management
 
 Keep your work safe and ready for publication with these tools:
 
@@ -49,33 +37,30 @@ Keep your work safe and ready for publication with these tools:
   - Pattern Discovery and Similarity/Difference settings.
   - Highlighted nodes/edges and search states.
 
----
-
-## 3. Node Search & Interaction
+### Node Search & Interaction
 
 - **Node Search:** Search for specific genes or node names. The matched node and its immediate neighbors will be highlighted, while others are dimmed.
 - **Clear:** Removes search highlights. If **Pattern Discovery** is active, clearing the search returns you to the pattern state rather than resetting the entire graph.
 
----
+## 2. Data Layer Configuration
+<img width="904" height="68" alt="image" src="https://github.com/user-attachments/assets/a0014191-d35f-44b6-9d47-5a116b087242" />
 
-## 4. Multi-omics Node Colors
+This section defines how multi modal data is visualized using concentric rings within nodes.
 
-Nodes are visualized with concentric rings representing different data types:
+### Different data types:
 
 | Layer | Common Biological Meaning |
 | :--- | :--- |
-| **Data1** | Gene Expression |
-| **Data2** | Methylation |
-| **Data3** | CNV (Copy Number Variation) |
-| **Data4** | SNV / Mutation Data |
+| **Data1** | Continuous data type |
+| **Data2** | Continuous data type |
+| **Data3** | Discrete data type |
+| **Data4** | Discrete data type  |
 | **Group** | Stage, Grade, or Class labels |
 
 > **Customization:** Each layer supports a three-color gradient: 
 > `[ Negative Color ]` — `[ Neutral Color ]` — `[ Positive Color ]`
 
----
-
-## 5. Data Filtering & Normalization
+### Data Filtering & Normalization
 
 Refine your view by selecting specific data layers and scales:
 
@@ -84,14 +69,17 @@ Refine your view by selecting specific data layers and scales:
    - `Raw`: Original values.
    - `Min-Max Norm`: Scaled between 0 and 1.
    - `Z-score`: Standardized relative to the mean.
-3. **Value Range:** Use the slider to filter nodes based on the selected scale.
+3. **Value Range Filtering:**  Users can filter nodes based on value ranges for selected data layers.
 
 ---
 
-## 6. Pattern Discovery
+## 3. Pattern Discovery
 
-Identify **anti-correlated** multi-omics patterns (e.g., High Expression + Low Methylation).
-
+<img width="904" height="80" alt="image" src="https://github.com/user-attachments/assets/274dba96-5b0a-4872-a238-ca0ede7ecee4" />
+<p align="justify">
+Pattern Discovery identifies anti correlated multi omics patterns such as high expression with low methylation. Thresholds define high and low states, while intensity is computed using z score based measures
+<p>
+  
 ### How it works:
 Pattern Discovery typically compares **Data1** and **Data2** using Z-score thresholds:
 - **Data1 High/Low:** Define thresholds for high/low states.
