@@ -6,6 +6,10 @@
 ## 1. Network control panel
 <img width="904" height="68" alt="image" src="https://github.com/user-attachments/assets/4dc45df5-5691-410a-872a-f776ef70187f" />
 
+<p align="justify">
+This section controls network selection, layout, degree filtering, search, and export functions. Users can select networks, adjust layout, define degree range filters, and export results in PNG, SVG, or JSON formats.
+<p>
+
 ### Network Selection
 Select the specific network or community you wish to explore. Note that **only one network** is displayed at a time to maintain clarity.
 
@@ -43,6 +47,7 @@ Keep your work safe and ready for publication with these tools:
 - **Clear:** Removes search highlights. If **Pattern Discovery** is active, clearing the search returns you to the pattern state rather than resetting the entire graph.
 
 ## 2. Data Layer Configuration
+
 <img width="904" height="68" alt="image" src="https://github.com/user-attachments/assets/a0014191-d35f-44b6-9d47-5a116b087242" />
 
 This section defines how multi modal data is visualized using concentric rings within nodes.
@@ -71,11 +76,10 @@ Refine your view by selecting specific data layers and scales:
    - `Z-score`: Standardized relative to the mean.
 3. **Value Range Filtering:**  Users can filter nodes based on value ranges for selected data layers.
 
----
-
-## 3. Pattern Discovery
+## 3. Pattern Discovery Module
 
 <img width="904" height="80" alt="image" src="https://github.com/user-attachments/assets/274dba96-5b0a-4872-a238-ca0ede7ecee4" />
+
 <p align="justify">
 Pattern Discovery identifies anti correlated multi omics patterns such as high expression with low methylation. Thresholds define high and low states, while intensity is computed using z score based measures
 <p>
@@ -84,11 +88,9 @@ Pattern Discovery identifies anti correlated multi omics patterns such as high e
 Pattern Discovery typically compares **Data1** and **Data2** using Z-score thresholds:
 - **Data1 High/Low:** Define thresholds for high/low states.
 - **Data2 High/Low:** Define thresholds for high/low states.
-- **Highlighting:** Nodes matching opposite directions (High/Low or Low/High) are automatically highlighted.
+- **Highlighting:** Nodes matching opposite directions trend (High/Low or Low/High) are automatically highlighted.
 
----
-
-## 7. Analysis Modes (Group-aware vs. Group-free)
+### Analysis Modes (Group-aware vs. Group-free)
 
 Depending on whether you have stage or group information, the viewer adjusts its metrics:
 
@@ -101,20 +103,23 @@ Depending on whether you have stage or group information, the viewer adjusts its
 - **GlobalPatternRate:** Measures how many samples support the pattern globally.
 - **GroupScore:** Measures global evidence without using labels.
 
----
 
-## 8. Sample Selection (Similarity & Difference)
+## 4. Difference and Similarity Displaying Module
 
-These functions change **which sample slices** are shown in the node rings without deleting any data.
+<img width="904" height="45" alt="image" src="https://github.com/user-attachments/assets/2fb002b4-a4db-43b2-b91d-e5a83cb87642" />
+
+This module selects representative samples based on multi-omics deviation. It supports stage aware sampling and robust node filtering using Data1 and Data2 thresholds.
 
 - **Difference Displaying:** Selects samples with the most multi-omics variation.
 - **Similarity Displaying:** Selects samples that are most coherent.
 - **Samples per Group:** Controls the number of selected samples (Default: `8`).
 
----
 
-## 9. Edge Controls
+## 5.Group and Edge Visualization Controls
 
+<img width="904" height="92" alt="image" src="https://github.com/user-attachments/assets/9a3969a1-44b6-4c2b-a2b2-705c1fbd1fed" />
+
+Groups and Edges are color coded, and users can define their colors. Users can also filter edges by weight and interaction type.
 Fine-tune the connections between nodes:
 
 - **Edge Colors:** Map weights to a color gradient (Negative/Neutral/Positive).
@@ -122,29 +127,10 @@ Fine-tune the connections between nodes:
 - **Edge Data Norm:** Choose between `Raw`, `Min-Max`, or `Z-score`.
 - **Color by `interact_id`:** Color edges by interaction type instead of weight.
 
----
 
-## 10. Viewer Types
+## 6.Viewer Types
 
 | Directed Viewer | Undirected Viewer |
 | :--- | :--- |
 | Preserves edge direction (`A → B` ≠ `B → A`). | Ignores direction (`A → B` & `B → A` are merged). |
 | Best for: Regulatory or Signaling networks. | Best for: Similarity or Co-expression networks. |
-
----
-
-## 11. Recommended Workflow
-
-1.  **Initialize:** Select your **Network** and choose a **Layout**.
-2.  **Style:** Adjust **Node Colors** and **Edge Colors** for clarity.
-3.  **Filter:** Apply **Node/Edge Filters** to remove noise.
-4.  **Discover:** Use **Pattern Discovery** to find biological insights.
-5.  **Refine:** Use **Difference/Similarity** displaying to focus on key samples.
-6.  **Locate:** Use **Node Search** to find specific genes of interest.
-7.  **Export:** Save a **Snapshot** for future work and export **SVG** for your paper.
-
----
-
-## Notes
-- **Non-Destructive:** Layout and filtering changes do not modify the original data.
-- **Snapshots:** Always save a snapshot before closing to preserve your customized view.
